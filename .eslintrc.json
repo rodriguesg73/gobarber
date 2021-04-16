@@ -1,0 +1,73 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "prettier",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react/jsx-one-expression-per-line": "off",
+      "react-hooks/exhaustive-deps": "off",
+      "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+      "react/no-unused-vars": "off",
+      "import/prefer-default-export": "off",
+      "eslint no-unused-expressions": 0,
+      "import/extensions": [
+        "warn",
+        "ignorePackages",
+        {
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "camelcase": "off",
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/no-use-before-define": ["off", {"functions": false, "classes": false,"variables": false}],
+      "no-unused-vars": "off",
+      "react/jsx-props-no-spreading": "off",
+      "import/no-unresolved": [2, {"commonjs": true, "amd": true}],
+      "import/named": 2,
+      "import/namespace": 2,
+      "import/default": 2,
+      "import/export": 2,
+      "react/prop-types": "off",
+      "@typescript-eslint/ban-types": "off",
+      "no-restricted-globals": "off",
+      "@typescript-eslint/explicit-module-boundary-types": 0,
+      "import/parsers": [0,{
+        "@typescript-eslint/parser": [
+          ".ts",
+          ".tsx"
+        ]
+      }]
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    }
+}
